@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    line-height: 1.6;
+    box-sizing: inherit;
+}
+
+p {
+    color: var(--transparent-white);
+    font-family: "Big Shoulders", sans-serif;
+}
+
+h1 {
+    color: var(--very-light-gray);
+    font-family: "Big Shoulders", sans-serif;
+    text-transform: uppercase;
+    font-stretch: condensed;
+}
+
+.card-wrapper {
+    width: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 50px;
+}
+
+.card1 {
+    background-color: var(--bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.card2 {
+    background-color: var(--dark-cyan);
+}
+
+.card3{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.card > button {
+    padding: 10px 35px;
+    margin: 0 auto;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 100px;
+    background-color: var(--very-light-gray);
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.card > button:hover {
+    border: 2px solid var(--very-light-gray);
+    background-color: transparent;
+    color: var(--very-light-gray);
+    transition: all ease-in-out 0.1s;
+}
+
+.card1 button {
+    color: var(--bright-orange);
+}
+
+.card2 button {
+    color: var(--dark-cyan);
+}
+
+.card3 button {
+    color: var(--very-dark-cyan);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 1000px) {
+    .card-wrapper {
+        flex-direction: row;
+    }
+    .card {
+        min-width: 300px;
+    }
+    .card1 {
+        background-color: var(--bright-orange);
+        border-radius: 10px 0 0 10px;
+    }
+    
+    .card3{
+        background-color: var(--very-dark-cyan);
+        border-radius: 0 10px 10px 0;
+    }
+}
